@@ -122,4 +122,19 @@ public class AsignaturaService {
             throw new IllegalArgumentException("El horario se solapa con otra asignatura en el mismo salón");
         }
     }
+
+    // Métodos adicionales para API REST
+    public java.util.Optional<Asignatura> buscarPorId(Long id) {
+        return asignaturaRepository.findById(id);
+    }
+
+    public List<Asignatura> buscarPorDocente(Long docenteId) {
+        Usuario docente = usuarioRepository.findById(docenteId)
+                .orElseThrow(() -> new IllegalArgumentException("Docente no encontrado"));
+        return asignaturaRepository.findByDocenteEncargado(docente);
+    }
+
+    public void eliminar(Long id) {
+        asignaturaRepository.deleteById(id);
+    }
 }

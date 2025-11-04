@@ -1,0 +1,59 @@
+body{font-family:Segoe UI,Arial,sans-serif;margin:20px;background:#f7f7fb;color:#222}
+header,footer{margin-bottom:16px}
+a{color:#0b5ed7;text-decoration:none}a:hover{text-decoration:underline}
+form{max-width:520px;padding:16px;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.04)}
+label{display:block;margin:8px 0 4px}
+input[type=text],input[type=password],input[type=number],input[type=time],select{width:100%;padding:8px;border:1px solid #bbb;border-radius:4px;box-sizing:border-box}
+
+form.d-flex {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+/* Aplica estilos solo a botones que NO sean de Bootstrap (.btn) */
+button:not(.btn) {
+  background: #c0392b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:not(.btn):hover {
+  background: #a93226;
+}
+
+.btn-logout {
+  background: #c0392b !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  padding: 8px 14px;
+}
+
+.btn-logout:hover {
+  background: #a93226 !important;
+}
+
+.table{width:100%;border-collapse:collapse;background:#fff}
+.table th,.table td{border:1px solid #ddd;padding:8px}
+.table th{background:#f0f2f5;text-align:left}
+.alert{padding:10px;margin:10px 0;border-radius:6px}
+.alert-error{background:#fde2e2;color:#7a1c1c;border:1px solid #f5b5b5}
+.alert-info{background:#e7f1ff;color:#0b3c7c;border:1px solid #b8d2ff}
+.nav{margin-bottom:12px}
+
+/* Navbar más contrastado */
+.navbar.bg-primary { background-color: #0b3c7c !important; }
+.navbar .navbar-brand { font-weight: 600; }
+
+/* Botón de logout con contraste sobre navbar oscuro */
+.btn-logout { color: #fff; border-color: rgba(255,255,255,.75); }
+/* Evitar que el hover sea blanco pleno; usar un leve overlay */
+.btn-logout:hover { color: #fff; background-color: rgba(255,255,255,.15); border-color: #fff; }
